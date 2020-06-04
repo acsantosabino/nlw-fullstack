@@ -3,7 +3,7 @@ import { Ubuntu_700Bold, useFonts } from "@expo-google-fonts/ubuntu";
 import { AppLoading } from "expo";
 import React from "react";
 import { StatusBar } from "react-native";
-import Home from "./src/pages/Home";
+import Routes from "./routes";
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -19,7 +19,7 @@ export default function App() {
     return (
         <>
             <StatusBar barStyle="dark-content" backgroundColor="transparent" />
-            <Home />
+            <Routes />
         </>
     );
 }
