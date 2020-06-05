@@ -7,17 +7,24 @@ class PointsControllers {
     async index(request: Request, response: Response) {
         const { city, uf, items } = request.query;
 
-        const parsedItems = String(items)
-            .split(",")
-            .map((item) => Number(item.trim()));
-
-        const points = await knex("points")
+        let query = knex("points")
             .join("point_items", "points.id", "=", "point_items.point_id")
-            .whereIn("point_items.point_id", parsedItems)
-            .where("city", String(city))
-            .where("uf", String(uf))
             .distinct()
             .select("points.*");
+
+        if (items) {
+            const parsedItems = String(items)
+                .split(",")
+                .map((item) => Number(item.trim()));
+            query.whereIn("point_items.point_id", parsedItems);
+        }
+        if (city) {
+            query.where("city", String(city));
+        }
+        if (uf) {
+            query.where("uf", String(uf));
+        }
+        const points = await query;
 
         return response.json(points);
     }
