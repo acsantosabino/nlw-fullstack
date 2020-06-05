@@ -8,7 +8,7 @@ export interface Item {
 
 export interface Point {
     id: number;
-    image: string;
+    image_url: string;
     name: string;
     email: string;
     whatsapp: string;
