@@ -1,4 +1,4 @@
-# ![](/home/arthur/Documentos/estudo/nlw-fullstack/web-app/src/assets/logo.svg) nlw-fullstack
+# nlw-fullstack ![](https://raw.githubusercontent.com/acsantosabino/nlw-fullstack/5dcc57a8f593c1d452344b024a6cac671dbd76a6/web-app/src/assets/logo.svg)
 
 Projeto fullstack em typescript desenvolvido durante a [Next Level Week #01](https://nextlevelweek.com/) da [Rocketseat](https://rocketseat.com.br/) seguinda a esta [interface](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/?viewer=1&node-id=0:1).
 
